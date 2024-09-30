@@ -1,0 +1,16 @@
+const num1 = parseFloat(prompt ("Digite numero 1 aqui: "));
+const num2 = parseFloat(prompt ("Digite numero 2 aqui: "));
+let soma, subt, mult, divi, resto, expo;
+soma=num1+num2;
+subt=num1-num2;
+mult=num1*num2;
+divi=num1/num2;
+resto=num1%num2;
+expo=num1**num2;
+let saida = document.getElementById("saida");
+saida.innerHTML="<br>Soma = "+soma;
+saida.innerHTML+="<br>Subtração = "+subt;
+saida.innerHTML+="<br>Multiplicação = "+mult;
+saida.innerHTML+="<br>Divisão = "+divi;
+saida.innerHTML+="<br>Resto = "+resto;
+saida.innerHTML+="<br>Expo = "+expo;
