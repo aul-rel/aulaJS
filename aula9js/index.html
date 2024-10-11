@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de decisão</title>
+</head>
+<body>
+    <h1>Estrutura de decisão com if</h1>
+    <h2>11-10-24</h2>
+
+    <div id="saida">Saída</div>
+
+    <script>
+      let hora = new Date().getHours(); // Obtém a hora atual
+      let saida = document.getElementById('saida'); //div Saida
+      // Verifica se a hora é menor que 12
+      // if (hora > 18) {// 19 20 21 22 23 24
+      //   saida.innerHTML = "Boa noite! Hora: "+hora;
+      // }
+      if (hora >= 1 && hora <= 11) {//1 2 3 4 5 6 7 8 9 10 11
+        saida.innerHTML = "Bom dia! Hora: "+hora;
+      }
+      else if (hora >= 12 && hora <= 18) {//12 13 14 15 16 17 18
+        saida.innerHTML = "Boa tarde! Hora: "+hora;
+      }
+      // else {//0 1 2 3 4 5 6 7 8 9 10 11
+      //   saida.innerHTML = "Bom dia! Hora: "+hora;
+      // }
+      else {
+        saida.innerHTML = "Boa noite! Hora: "+hora;
+      }
+      saida.innerHTML += "<br> Continua";
+    </script>
+</body>
+</html>
