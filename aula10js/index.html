@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estrutura de Decisão</title>
+</head>
+<body>
+  <h1>Estrutura de Decisão com switch</h1>
+  <div id="saida">Saída</div>
+
+  <script>
+
+    // let data = new Date(); // Dia atual
+    // let dia = data.getDay(); // Obtém o dia da semana (0-6)
+    // let hora = data.getHours(); // Horas (0-23)
+    // let minuto = data.getMinutes(); // Minutos (0-59)
+    // let saida = document.getElementById('saida');
+
+    let dia = new Date().getDay(); // Obtém o dia da semana (0-6)
+    let saida = document.getElementById('saida');
+    
+    let dataAtual = new Date();
+    let diah = dataAtual.getDate();
+    let mes = dataAtual.getMonth() + 1; // Adiciona 1 porque os meses começam em 0
+    let ano = dataAtual.getFullYear();
+    let hora = dataAtual.getHours();
+    let minuto = dataAtual.getMinutes();
+    let esta = dataAtual.toLocaleTimeString();
+    let hoje = " Dia "+diah + "/" + mes + "/" + ano + " - "+hora+"h"+minuto;
+    // let hoje = " Dia "+diah + "/" + mes + "/" + ano + " - "+esta;
+    
+    switch (dia) {
+      case 0:
+        saida.innerHTML = 'Hoje é Domingo!';
+        break;
+      case 1:
+        saida.innerHTML = 'Hoje é Segunda-Feira!';
+        break;
+      case 2:
+        saida.innerHTML = 'Hoje é Terça-Feira!';
+        break;
+      case 3:
+        saida.innerHTML = 'Hoje é Quarta-Feira!';
+        break;
+      case 4:
+        saida.innerHTML = 'Hoje é Quinta-Feira!'
+        break;
+      case 5:
+        saida.innerHTML = 'Hoje é Sexta-Feira!';
+        break; 
+      case 6:
+        saida.innerHTML = 'Hoje é Sábado!';
+        break;
+      default:
+        saida.innerHTML = 'Erro no cálculo do dia!';
+    }
+    saida.innerHTML += hoje +" "+dataAtual.toLocaleTimeString();
+  </script>
+</body>
+</html>
