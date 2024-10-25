@@ -11,8 +11,10 @@
 
 
     <div id="saida"></div>
+    <select></select>
 
     <script>
+        let sel = document.querySelector("select");
         let saida = document.getElementById("saida");
         let i = 0;//valor inicial
         
@@ -80,11 +82,80 @@
         
         while (i <= 10) { //condição
         saida.innerHTML += i + " ";
-        i++;
+        i+=2;
+        /*
         i++; // Incremento/Contador
+        i++; // Incrementa de novo
+
+        */
+        }
+        saida.innerHTML+="<hr>";
+        
+        /* 1) 0
+        2) i<=10
+        3)i+=2
+        4) 6
+        5) 12
+        */
+
+        i = 20;
+        while (i < 5) {
+            saida.innerHTML += i + " ";
+            i++;
+        }
+        /*
+        1) 20;
+        2) i < 5;
+        3) i++;
+        4) Nenhuma
+        5) 20;
+        */
+        saida.innerHTML+="<hr>";
+
+        i = 20;
+        do {
+            saida.innerHTML += i + " ";
+            i++;
+        } while (i < 5);
+        /*
+        1) 20;
+        2) i < 5;
+        3) i++;
+        4) 1 vez;
+        5) 21;
+        */
+        saida.innerHTML+="<hr>";
+        
+        for(i=0;i<=4;i++){
+            saida.innerHTML += i + " ";//0 1 2 3 4
+        }
+        
+        saida.innerHTML+="<hr>";
+        for(i=13;i<=16;i++){
+            saida.innerHTML += i + " ";
         }
         saida.innerHTML+="<hr>";
 
+        /*
+        <ul>
+        <li>Item 10</li>
+        Item 11
+        Item 12
+        Item 13
+        </ul>
+        */
+
+        saida.innerHTML+="<ul>";
+            for(i=10;i<=16;i++){
+                saida.innerHTML+="<li>Item "+ i +"</li>"
+            } 
+        saida.innerHTML+="</ul>"
+        
+
+        saida.innerHTML+="<hr>";
+        
+        
+        
     </script>
 
 

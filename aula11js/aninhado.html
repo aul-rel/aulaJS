@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninhado</title>
+</head>
+<body>
+<h1>Aninhado</h1>
+
+<div id="saida"></div>
+
+<script>
+let saida = document.getElementById("saida");
+
+for (let i = 0; i < 4; i++) {//externo 0 1 2 3
+	for (let j = 0; j < 3; j++) { //interno 0 1 2    
+    saida.innerHTML +=  i + " " + j + "<br>";//0 0; 0 1; 0 2; 1 0; 1 1; 1 2;
+    }
+}
+
+/*
+1) i = 0 & j = 0
+2) i<4 & j<3
+3) i++ & j++
+4) Primeiro loop executado 4 vezes, segundo executado 3 vezes;
+5) i = 5 & j = 4
+
+*/
+</script>
+    
+</body>
+</html>
