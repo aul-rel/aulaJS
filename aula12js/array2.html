@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <div id="saida">Saida</div>
+    <script>
+        let saida = document.getElementById("saida");
+        const naval = [
+            ["água","avião","avião","água"],
+            ["navio","água","água","água"],
+            ["água","água","água","submarino"]
+        ];
+
+        //*Imprimir:
+        //submarino
+        //avião
+        //avião
+        saida.innerHTML=`${naval[2][3]}<br>`;
+        saida.innerHTML+=`${naval[0][1]}<br>`;
+        saida.innerHTML+=`${naval[1][0]}<br>`;
+
+        
+    </script>
+</body>
+</html>

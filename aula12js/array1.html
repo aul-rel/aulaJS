@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <div id="saida">Saida</div>
+    <script>
+        let saida = document.getElementById("saida");
+        const uf=["SP","RJ","MG","ES","SC","AC","MA","TO","AM","BA","RS","PI","DF"];
+        saida.innerHTML=`${uf}<br>`;
+        saida.innerHTML+=`${uf.length}<hr>`;//Quantidade de valores do array
+        for(let i=0;i<uf.length;i++){
+            saida.innerHTML+=`${uf[i]}<br>`;
+        }
+        saida.innerHTML+=`<hr>`;
+        const estudante = ['Astrogildo', 'Belarmina', 'Pafuncia'];
+        for (let valor of estudante) {
+            saida.innerHTML += `${valor}<br>`;
+        }
+        saida.innerHTML+=`<hr>`;
+        for (let pos in estudante) {
+            saida.innerHTML += `${pos} - ${estudante[pos]}<br>`;
+        }
+        saida.innerHTML+=`<hr>`;
+        //              0         1          2
+        const m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        //          0  1  2    0  1  2    0  1  2
+        saida.innerHTML += `${m}<hr>`;//todos
+        saida.innerHTML += `${m[0]}<br>`;//1 2 3
+        saida.innerHTML += `${m[1]}<br>`;//4 5 6
+        saida.innerHTML += `${m[2]}<hr>`;//7 8 9
+
+        saida.innerHTML += `${m[0][0]} ${m[0][1]} ${m[0][2]}<br>`;
+        saida.innerHTML += `${m[1][0]} ${m[1][1]} ${m[1][2]}<br>`;
+        saida.innerHTML += `${m[2][0]} ${m[2][1]} ${m[2][2]}<br>`;
+        saida.innerHTML+=`<hr>`;
+        saida.innerHTML += `${m[8][1]}<br>`;//8
+        saida.innerHTML += `${m[1][1]}<br>`;//5
+        saida.innerHTML += `<hr>`;
+
+        const naval = [
+            ["água","avião","avião","água"],
+            ["navio","água","água","água"],
+            ["água","água","água","submarino"]
+        ];
+        //*Imprimir:
+        //submarino
+        //avião
+        //avião
+
+
+
+    </script>
+</body>
+</html>

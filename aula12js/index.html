@@ -8,6 +8,37 @@
 <body>
     <h1>Array</h1>
     <div id="saida">Saida</div>
+    <script>
+        let y;
+        let saida = document.getElementById("saida");
+        y=10;
+        y=20;
+        y=5;
+        saida.innerHTML=`${y}<br>`;
+        //       0    1  2   3    4
+        const w=[10, 20, 5, 7.5, "oi"];//quant = 5
+        saida.innerHTML+=`${w}<br>`;
+        saida.innerHTML+=`${w[2]}<br>`;
+        saida.innerHTML+=`${w[3]}<br>`;
+        saida.innerHTML+=`${w[0]}<br>`;
+        saida.innerHTML+=`${w[1]}<br>`;
+        saida.innerHTML+=`${w[4]}<hr>`;
+        w[0]+=5;//15
+        w[1]+=w[0];//20+15=35
+        w[2]%=2;//1
+        w[3]+=0.5;//8
+        w[4]+=", tchau!";//"oi, tchau!"
 
+        saida.innerHTML+=`${w}<br>`;
+        saida.innerHTML+=`${w[0]}<br>`;
+        saida.innerHTML+=`${w[1]}<br>`;
+        saida.innerHTML+=`${w[2]}<br>`;
+        saida.innerHTML+=`${w[3]}<br>`;
+        saida.innerHTML+=`${w[4]}<hr>`;
+
+    
+
+
+    </script>
 </body>
 </html>
