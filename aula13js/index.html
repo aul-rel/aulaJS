@@ -1,1 +1,28 @@
-aa
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script>
+        function mudarCor() {
+          document.querySelector("#elemento").style.backgroundColor = "yellow";
+        }
+        function mudar(){
+          document.querySelector("body").style.backgroundColor="lightblue";
+        }
+        function mudardenovo(){
+          document.querySelector("body").style.backgroundColor="white";
+        }
+      </script>
+</head>
+<body onload="mudar()">
+    <h1>Eventos</h1>
+    <h1 onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+      Passe o mouse aqui!
+    </h1>
+    <h1 onclick="mudar()" ondblclick="mudardenovo()" id="elemento">Clique aqui!</h1>
+    <button>Clique</button>
+    
+</body>
+</html>

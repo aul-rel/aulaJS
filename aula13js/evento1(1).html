@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Propriedades</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <h1 id="mouse">Passe o mouse aqui!</h1>
+    <h1 id="click">Clique aqui!</h1>
+    <button id="btn1">Dark</button>
+    <button id="btn2">Light</button>
+    <form>
+        Cor <input type="text" name="cor" id="cor">
+        Saida <input type="text" name="saida" id="saida" readonly>
+        <button id="btn3">Vai</button>
+    </form>
+
+    <script>
+      const mouse = document.querySelector("#mouse");
+      const click = document.querySelector("#click");
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
+      const btn3 = document.querySelector("#bnt3");
+      const body = document.querySelector("body");
+      let tipo="light";
+
+      const cor = document.querySelector("#cor");
+      const saida = document.querySelector("#saida");
+
+      click.onclick = function() {
+        click.style.backgroundColor = "green";
+      };
+      
+      mouse.onmouseover = function() {
+        mouse.style.color = "blue";
+      };
+      
+      mouse.onmouseout = function() {
+        
+        if(tipo=="dark"){
+          mouse.style.color = "white";
+        }
+        else{
+          mouse.style.color = "black";
+        }
+      };
+
+      btn1.onclick = function() {
+        body.style.backgroundColor="black";
+        body.style.color="white";
+        mouse.style.color="white";
+        tipo='dark';
+    };
+
+      btn2.onclick = function() {
+        body.style.backgroundColor="white";
+        body.style.color="black";
+        mouse.style.color="black";
+        tipo='light';
+      };
+    </script>
+</body>
+</html>
